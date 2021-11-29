@@ -1,13 +1,13 @@
 //express server that let the bot run 24/7
 const express = require('express')
 const app = express();
-const port = 3000;
+const port = 3001;
 app.get('/', (req, res) => {
   res.send('Your joey Tribbiani Bot is ready to talk. go back to the discord Server and start talking ')
 })
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+  console.log("Server is running.");
+});
 const Discord = require('discord.js');
 // node-fetch for making HTTP requests
 const fetch = require('node-fetch');
