@@ -63,4 +63,7 @@ client.on('message', async message => {
 
 client.login(process.env.DISCORD_TOKEN);
 
-    
+    var http = require("http");
+setInterval(function() {
+    http.get("http://bot-aadil.herokuapp.com");
+}, 300000);
